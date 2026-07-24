@@ -1,0 +1,126 @@
+/* base.css — Variables, reset, utilities */
+
+:root {
+  --bg: #09090B;
+  --bg-elevated: #111117;
+  --surface: #17171F;
+  --surface-alt: #20202A;
+  --surface-muted: #1D1D28;
+  --border: #2E2E3A;
+  --border-soft: rgba(255,255,255,0.08);
+  --border-focus: rgba(108,99,255,0.30);
+
+  --accent: #6C63FF;
+  --accent-hover: #7D74FF;
+  --secondary: #4F8DFF;
+  --success: #34D399;
+  --warning: #FBBF24;
+  --danger: #F87171;
+
+  --text-primary: #FFFFFF;
+  --text-secondary: #A6A6B5;
+  --text-muted: #8F92A1;
+  --text-placeholder: #6E728F;
+
+  --radius: 1rem;
+  --radius-sm: 0.75rem;
+  --radius-lg: 1.5rem;
+
+  --shadow: 0 24px 80px rgba(0,0,0,0.30);
+  --shadow-soft: 0 12px 36px rgba(0,0,0,0.16);
+
+  --btn-height: 3rem;
+  --btn-padding: 0 1.25rem;
+  --btn-radius: 1rem;
+  --card-padding: 1.5rem;
+
+  --font-size-h1: 2.625rem;
+  --font-size-h2: 1.875rem;
+  --font-size-h3: 1.375rem;
+  --font-size-base: 1rem;
+  --font-size-caption: 0.875rem;
+  --line-height: 1.6;
+
+  --space-4: 0.25rem;
+  --space-8: 0.5rem;
+  --space-12: 0.75rem;
+  --space-16: 1rem;
+  --space-24: 1.5rem;
+  --space-32: 2rem;
+  --space-48: 3rem;
+  --space-64: 4rem;
+
+  --space-xs: 0.5rem;
+  --space-sm: 0.75rem;
+  --space-md: 1rem;
+  --space-lg: 1.5rem;
+  --space-xl: 2rem;
+  --space-2xl: 3rem;
+
+  --sidebar-width: 280px;
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  font-family: var(--font-sans);
+  font-size: var(--font-size-base);
+  line-height: var(--line-height);
+  color: var(--text-primary);
+  background: var(--bg);
+}
+
+button,
+input,
+textarea,
+select {
+  font: inherit;
+}
+
+button {
+  border: none;
+  background: none;
+}
+
+img,
+svg {
+  display: block;
+  max-width: 100%;
+}
+
+#app {
+  min-height: 100vh;
+}
+
+[hidden] {
+  display: none !important;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.fade-in {
+  animation: fadeIn 0.35s ease both;
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0,0,0,0);
+  border: 0;
+  white-space: nowrap;
+}
